@@ -1,0 +1,83 @@
+{
+  "name": "ExtendedUser",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "nicknae": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "groups": {
+      "type": "hasAndBelongsToMany",
+      "model": "Group",
+      "foreignKey": ""
+    },
+    "proyects": {
+      "type": "hasAndBelongsToMany",
+      "model": "Proyect",
+      "foreignKey": ""
+    },
+    "tasks": {
+      "type": "hasAndBelongsToMany",
+      "model": "Task",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "find"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "*"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__link__groups"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__get__groups"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__create__proyects"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__get__proyects"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "__link__proyects"
+    }
+  ],
+  "methods": {}
+}

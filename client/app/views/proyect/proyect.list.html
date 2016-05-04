@@ -1,0 +1,45 @@
+<div class="heading" style="margin-bottom: 30px;">
+    <h1>Projects</h1>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="bs-example" data-example-id="simple-table">
+            <table class="table" style="text-align: left;">
+                <caption>Mis proyectos</caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>Activo</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="p in proyects" ui-sref="app.projects.detail({proyectId: p.id})">
+                    <th scope="row">{{ $index + 1}}</th>
+                    <td>{{ p.name }}</td>
+                    <td>{{ p.description }}</td>
+                    <td><span class="glyphicon glyphicon-ok"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <form style="text-align: left;">
+            <h4 style="text-align: center;">Crear proyecto</h4>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Nombre</label>
+                <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Nombre"
+                       ng-modeL="proyect.name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Descripcion</label>
+                <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Descripcion"
+                       ng-model="proyect.description">
+            </div>
+            <button type="submit" class="btn btn-default" ng-click="createProyect()">Submit</button>
+        </form>
+    </div>
+</div>

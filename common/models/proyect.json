@@ -1,0 +1,44 @@
+{
+  "name": "Proyect",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "scope": {
+    "include": [
+      "tasks",
+      "extendedUsers"
+    ]
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "goals": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "tasks": {
+      "type": "hasMany",
+      "model": "Task",
+      "foreignKey": ""
+    },
+    "extendedUsers": {
+      "type": "hasAndBelongsToMany",
+      "model": "ExtendedUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

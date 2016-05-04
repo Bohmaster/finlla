@@ -1,0 +1,34 @@
+{
+  "name": "Group",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "extendedUsers": {
+      "type": "hasAndBelongsToMany",
+      "model": "ExtendedUser",
+      "foreignKey": ""
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": {}
+}

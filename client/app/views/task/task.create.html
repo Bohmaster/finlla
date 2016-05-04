@@ -1,0 +1,19 @@
+<form class="form-horizontal" style="padding: 5%;">
+    <h4 style="text-align: center;">Crear tarea</h4>
+    <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" class="form-control" id="name" placeholder="Nombre"
+               ng-modeL="task.name">
+    </div>
+    <div class="form-group">
+        <label for="description">Descripcion</label>
+        <input type="text" class="form-control" id="description" placeholder="Descripcion"
+               ng-model="task.description">
+    </div>
+    <div class="form-group">
+        <label for="complexity">Complejidad</label>
+        <input type="text" class="form-control" id="complexity" placeholder="Complejidad"
+               ng-model="task.complexity">
+    </div>
+    <button type="submit" class="btn btn-default" ng-click="createTask()">Submit</button>
+</form>

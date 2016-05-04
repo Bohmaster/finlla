@@ -1,0 +1,42 @@
+{
+  "ids": {
+    "User": 1,
+    "AccessToken": 1,
+    "ACL": 1,
+    "RoleMapping": 1,
+    "Role": 1,
+    "ExtendedUserCredential": 1,
+    "ExtendedUserIdentity": 1,
+    "Proyect": 1,
+    "Task": 1,
+    "Group": 1,
+    "ExtendedUser": 1,
+    "ExtendedUserGroup": 1,
+    "ExtendedUserProyect": 2,
+    "ExtendedUserTask": 4,
+    "Notification": 1
+  },
+  "models": {
+    "User": {},
+    "AccessToken": {},
+    "ACL": {},
+    "RoleMapping": {},
+    "Role": {},
+    "ExtendedUserCredential": {},
+    "ExtendedUserIdentity": {},
+    "Proyect": {},
+    "Task": {},
+    "Group": {},
+    "ExtendedUser": {},
+    "ExtendedUserGroup": {},
+    "ExtendedUserProyect": {
+      "1": "{\"extendedUserId\":1,\"proyectId\":1,\"id\":1}"
+    },
+    "ExtendedUserTask": {
+      "1": "{\"extendedUserId\":1,\"taskId\":1,\"id\":1}",
+      "2": "{\"extendedUserId\":1,\"taskId\":2,\"id\":2}",
+      "3": "{\"extendedUserId\":1,\"taskId\":3,\"id\":3}"
+    },
+    "Notification": {}
+  }
+}

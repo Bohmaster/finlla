@@ -1,0 +1,16 @@
+<form style="text-align: left; padding: 5%">
+    <h4 style="text-align: center;">Asignar usuario a tarea</h4>
+    <div class="form-group">
+        <label for="extendedUsers">Username</label>
+        <input id="extendedUsers"
+               uib-typeahead="state.username for state in resolved.extendedUsers | filter:$viewValue | limitTo:8"
+               type="text" class="form-control" placeholder="usuario"
+               ng-model="selected">
+    </div>
+    <div style="text-align: right; position: relative; height: 30px;">
+        <span class="pull-right min-margin rounded" ng-repeat="user in usersAssigned">
+        {{user.username}}
+    </span>
+    </div>
+    <button class="btn btn-default" ng-click="assignUsers()">Asignar</button>
+</form>

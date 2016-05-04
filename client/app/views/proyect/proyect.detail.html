@@ -1,0 +1,57 @@
+<div class="heading" style="margin-bottom: 30px;">
+    <h2>{{ proyect.name }}</h2>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="bs-example" data-example-id="simple-table">
+            <table class="table" style="text-align: left;">
+                <caption>Tareas</caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th>
+                        <span class="glyphicon glyphicon-plus pull-right min-margin"
+                              ng-click="createTask()">
+                        </span>
+                    </th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="task in proyect.tasks">
+                    <td scope="row">{{ $index + 1}}</td>
+                    <td>{{ task.name }}</td>
+                    <td>{{ task.description }}</td>
+                    <td>
+                        <span class="glyphicon glyphicon-minus pull-right min-margin"></span>
+                        <span class="glyphicon glyphicon-user pull-right min-margin" ng-click="assignUser(task.id)"></span>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="bs-example" data-example-id="simple-table">
+            <table class="table" style="text-align: left;">
+                <caption>Usuarios del proyecto</caption>
+                <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Rol</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="user in proyect.extendedUsers">
+                    <th scope="row">{{ $index + 1}}</th>
+                    <td>{{ user.username }}</td>
+                    <td> Worker</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

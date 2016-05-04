@@ -1,0 +1,29 @@
+[6836:6688:0504/053541:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=https://ticinocrashreporter.azurewebsites.net/crash --application-name=VSCode --v=1]
+[6836:6688:0504/053541:VERBOSE1:crash_service.cc(142)] window handle is 000A070C
+[6836:6688:0504/053541:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\VSCode Crash Service
+dumps at 
+[6836:6688:0504/053541:VERBOSE1:crash_service.cc(294)] checkpoint is crash_checkpoint.txt
+server is https://ticinocrashreporter.azurewebsites.net/crash
+maximum 128 reports/day
+reporter is electron-crash-service
+[6836:6688:0504/053541:VERBOSE1:crash_service_main.cc(84)] Ready to process crash requests
+[6836:6580:0504/053541:VERBOSE1:crash_service.cc(323)] client start. pid = 7464
+[6836:6580:0504/053541:VERBOSE1:crash_service.cc(323)] client start. pid = 7992
+[8032:5928:0504/053541:VERBOSE1:crash_service_main.cc(68)] Session start. cmdline is [--reporter-url=https://ticinocrashreporter.azurewebsites.net/crash --application-name=VSCode --v=1]
+[8032:5928:0504/053541:VERBOSE1:crash_service.cc(142)] window handle is 000703B2
+[8032:5928:0504/053541:VERBOSE1:crash_service.cc(290)] pipe name is \\.\pipe\VSCode Crash Service
+dumps at 
+[8032:5928:0504/053541:VERBOSE1:crash_service.cc(294)] checkpoint is crash_checkpoint.txt
+server is https://ticinocrashreporter.azurewebsites.net/crash
+maximum 128 reports/day
+reporter is electron-crash-service
+[8032:5928:0504/053541:ERROR:crash_service.cc(301)] could not start dumper
+[6836:6564:0504/053548:VERBOSE1:crash_service.cc(331)] client end. pid = 7992
+[6836:6564:0504/053548:VERBOSE1:crash_service.cc(331)] client end. pid = 7464
+[6836:6564:0504/053549:VERBOSE1:crash_service.cc(352)] zero clients. exiting
+[6836:6688:0504/053549:VERBOSE1:crash_service.cc(490)] session ending..
+[6836:6688:0504/053549:VERBOSE1:crash_service.cc(495)] clients connected :2
+clients terminated :2
+dumps serviced :0
+dumps reported :0
+[6836:6688:0504/053549:VERBOSE1:crash_service_main.cc(89)] Session end. return code is 0
